@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operativos</title>
+    <link rel="shortcut  icon" href="img/icon.jpg">
+   <link rel="stylesheet" href="css/stylo.css">
+</head>
+<body>
+
+    <header>
+        <nav> 
+          <a href="index.html"><img src="img/icon.jpg" alt=""></a>
+            <a href="paginas/linux.html">Linux</a>
+            <a href="paginas/macos.html">macOS</a>
+            <a href="paginas/windows.html">Windows</a>
+        </nav>
+    </header>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="img/img-dere.jpg" style="width:100%">
+          
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="img/img11.webp" style="width:100%">
+         
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="img/img-izq.jpg" style="width:100%">
+
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center" class="puntos">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+
+    <div class="titulo">
+        <h1>- - - Sistemas operativos - - - </h1>
+        <br>
+        <h3>Los sistemas operativos, también llamados núcleos o kernels, suelen ejecutarse de manera privilegiada respecto al resto del software, sin permitir que un programa cualquiera realice cambios de importancia sobre él que puedan comprometer su funcionamiento.
+        El sistema operativo es el protocolo básico de operatividad del computador, que coordina todas sus demás funciones de comunicaciones, de procesamiento, de interfaz con el usuario.
+        Los sistemas operativos consisten en interfaces gráficas, entornos de escritorio o gestores de ventanas que brindan al usuario una representación gráfica de los procesos en marcha. También puede ser una línea de comandos, es decir, un conjunto de instrucciones ordenado según su prioridad y que funciona con base a órdenes introducidas por el usuario.
+        El sistema operativo es el software que coordina y dirige todos los servicios y aplicaciones que utiliza el usuario en una computadora, por eso es el más importante y fundamental. Se trata de programas que permiten y regulan los aspectos más básicos del sistema. Los sistemas operativos más utilizados son Windows, Linux y macOs, sus logos son estos: </h3>
+        <br>
+    </div>
+
+    <div class="tarjetas">
+      <div class="card">
+        <img src="img/entradas.webp" alt="Ensalada">
+        <div class="card-content">
+          <h1>Windows</h1>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="img/rolls.jpg" alt="sushi rolls">
+        <div class="card-content">
+          <h1>Linux</h1>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="img/rolls premium.jpg" alt="sushi rolls premium">
+        <div class="card-content">
+          <h1>MacOs</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Derechos reservados. Estudiantes de primer año de Desarrollo de Software - 2025</p>
+    </footer>
+</body>
+</html>
